@@ -1,16 +1,16 @@
 import pandas as pd
-from sklearn import naive_bayes
+from sklearn import svm
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 from TfidfProcess import TfidfProcess
 from ModelController import ModelController
 
 
-def train_naive_bayes(train_data, train_label, test_data, test_label):
+def train_svm(train_data, train_label, test_data, test_label):
 
-    model = naive_bayes.MultinomialNB()
+    model = svm.SVC(gamma='scale')
     model.fit(train_data, train_label)
-    ModelController.save_model(model, 'NB')
+    ModelController.save_model(model, 'SVM')
     '''
     prediction = model.predict(test_data)
     # evaluate
@@ -19,7 +19,7 @@ def train_naive_bayes(train_data, train_label, test_data, test_label):
 
 
 if __name__ == '__main__':
-
+    
     data = pd.read_csv('../data/spam_or_not_spam.csv')
     # remove empty line
     data.dropna(inplace=True, how='any')
@@ -31,4 +31,4 @@ if __name__ == '__main__':
     # save preprocessor
     ModelController.save_preprocessor(text_processor)
     text_test = text_processor.transform_vectorize(text_test)
-    train_naive_bayes(text_train, label_train, text_test, label_test)
+    train_svm(text_train, label_train, text_test, label_test)
