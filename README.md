@@ -2,14 +2,14 @@
 
 Spam filtering module for Web Application
 
-# Installing
+## Installing
 
-Install Django:
+Install all required packages with:
 ```
-sudo pip3 install Django
+sudo pip3 install -r requirements.txt
 ```
 
-# Usage
+## Usage
 
 Go to src/API directory, run ```python3 manage.py runserver``` on terminal to launch your API server.
 Next, run ```python3 manage.py migrate``` to set up your database.
