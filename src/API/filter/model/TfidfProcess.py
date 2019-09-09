@@ -31,12 +31,15 @@ class TfidfProcess:
 
         for i in range(len(content)):
             word = content[i]
+            # transform all urls to 'URL'
+            if re.search('http', word) is not None:
+                word = 'URL'
+            # transform all numbers to 'NUMBER'
+            if re.search(r'\d', word) is not None:
+                word = 'NUMBER'
             # transform all symbols to 'SYMBOL'
             if re.search('[^A-Za-z]+', word) is not None:
                 word = 'SYMBOL'
-            # transform all word containing 'NUMBER' to 'NUMBER'
-            if re.search('NUMBER', word) is not None:
-                word = 'NUMBER'
             # lemmatize
             tag = pos_tag([word])[0][1]
             try:
