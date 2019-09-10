@@ -1,6 +1,6 @@
 # SpamFilter
 
-Restaurant review spam classifier API, using Support Vector Machine model with Gaussian kernel.
+Python Django restaurant review spam classifier API, using Support Vector Machine model with Gaussian kernel.
 
 Dataset consists of actual reviews from Yelp public dataset, which is available at 
 
