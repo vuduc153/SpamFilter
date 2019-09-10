@@ -1,6 +1,15 @@
 # SpamFilter
 
-Spam filtering module for Web Application
+Restaurant review spam classifier API, using Support Vector Machine model with Gaussian kernel.
+
+Dataset consists of actual reviews from Yelp public dataset, which is available at 
+
+https://www.yelp.com/dataset
+
+and positive examples from email spams dataset at
+
+https://www.kaggle.com/ozlerhakan/spam-or-not-spam-dataset
+
 
 ## Installing
 
