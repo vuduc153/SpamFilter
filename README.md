@@ -10,6 +10,7 @@ and positive examples from email spams dataset at
 
 https://www.kaggle.com/ozlerhakan/spam-or-not-spam-dataset
 
+Text data are vectorized using Term Frequency, Inverse Document Frequency embedding.
 
 ## Installing
 
