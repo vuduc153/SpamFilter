@@ -27,3 +27,5 @@ sudo pip3 install -r requirements.txt
 ## Usage
 
 To use the API, send a GET request with your review content in the field 'content' to `http://spamfilterap1.herokuapp.com/api/`
+
+The API server returns a JSON response with `{"ouput": 1}` for positive/spam inputs and correspondingly `{"output": 0}` for negative/non-spam inputs.
